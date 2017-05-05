@@ -400,7 +400,7 @@ if (isset($_POST["submit"]) && $_POST["submit"] == "Submit") {
                         </td>
                         <td class="colrite">
                             <input type="text" id="From_Email" name="From_Email" value="<?php echo $from_email; ?>"
-                                   style="width:95%;" required placeholder="Your.Email@example.com">
+                                   style="width:95%;" required placeholder="Your.Econtacto@lubricardelivery.com">
                         </td>
                     </tr>
                     <tr>
@@ -418,7 +418,7 @@ if (isset($_POST["submit"]) && $_POST["submit"] == "Submit") {
                         </td>
                         <td class="colrite">
                             <input type="text" id="To_Email" name="To_Email" value="<?php echo $to_email; ?>"
-                                   style="width:95%;" required placeholder="Recipients.Email@example.com">
+                                   style="width:95%;" required placeholder="Recipients.Econtacto@lubricardelivery.com">
                         </td>
                     </tr>
                     <tr>
