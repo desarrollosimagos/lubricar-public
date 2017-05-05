@@ -57,7 +57,7 @@ EOT;
     <title>Contact form</title>
 </head>
 <body>
-<h1>Contact us</h1>
+<h1>Contactanos</h1>
 <?php if (!empty($msg)) {
     echo "<h2>$msg</h2>";
 } ?>

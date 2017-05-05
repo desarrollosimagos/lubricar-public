@@ -170,7 +170,7 @@ Theme Version:	5.7.2
 	});
 
 	/*
-	Contact Form Message - Contact Us Page
+	Contact Form Message - Contactanos Page
 	*/
 	$('#contactForm').validate({
 		submitHandler: function(form) {
