@@ -51,6 +51,17 @@
 		<!-- Theme Custom CSS -->
 		<link rel="stylesheet" href="css/custom.css">
 
+
+		<!-- Admin Extension Specific Page Vendor CSS -->
+		<link rel="stylesheet" href="http://preview.oklerthemes.com/porto-admin/edge/assets/vendor/pnotify/pnotify.custom.css" />
+
+		<!-- Admin Extension CSS -->
+		<link rel="stylesheet" href="http://preview.oklerthemes.com/porto-admin/edge/assets/stylesheets/theme-admin-extension.css">
+
+		<!-- Admin Extension Skin CSS -->
+		<link rel="stylesheet" href="http://preview.oklerthemes.com/porto-admin/edge/assets/stylesheets/skins/extension.css">
+
+
 		<!-- Head Libs -->
 		<script src="vendor/modernizr/modernizr.min.js"></script>
 
@@ -162,319 +173,140 @@
 
 			<div class="container">
 
-				<div class="row">
-						<div class="col-md-9">
-
-							<div class="panel-group" id="accordion">
-								<div class="panel panel-default">
-									<div class="panel-heading">
-										<h4 class="panel-title">
-											<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
-												Billing Address
-											</a>
-										</h4>
+				<section class="panel panel-admin form-wizard" id="w4">
+								<header class="panel-heading">
+									<div class="panel-actions">
+										<a href="#" class="panel-action panel-action-toggle" data-panel-toggle=""></a>
+										<a href="#" class="panel-action panel-action-dismiss" data-panel-dismiss=""></a>
 									</div>
-									<div id="collapseOne" class="accordion-body collapse in">
-										<div class="panel-body">
-											<form action="/" id="frmBillingAddress" method="post">
-												<div class="row">
-													<div class="form-group">
-														<div class="col-md-12">
-															<label>Country</label>
-															<select class="form-control">
-																<option value="">Select a country</option>
-															</select>
-														</div>
-													</div>
-												</div>
-												<div class="row">
-													<div class="form-group">
-														<div class="col-md-6">
-															<label>First Name</label>
-															<input type="text" value="" class="form-control">
-														</div>
-														<div class="col-md-6">
-															<label>Last Name</label>
-															<input type="text" value="" class="form-control">
-														</div>
-													</div>
-												</div>
-												<div class="row">
-													<div class="form-group">
-														<div class="col-md-12">
-															<label>Company Name</label>
-															<input type="text" value="" class="form-control">
-														</div>
-													</div>
-												</div>
-												<div class="row">
-													<div class="form-group">
-														<div class="col-md-12">
-															<label>Address </label>
-															<input type="text" value="" class="form-control">
-														</div>
-													</div>
-												</div>
-												<div class="row">
-													<div class="form-group">
-														<div class="col-md-12">
-															<label>City </label>
-															<input type="text" value="" class="form-control">
-														</div>
-													</div>
-												</div>
-												<div class="row">
-													<div class="col-md-12">
-														<input type="submit" value="Continue" class="btn btn-primary pull-right mb-xl" data-loading-text="Loading...">
-													</div>
-												</div>
-											</form>
+					
+									<h2 class="panel-title">Form Wizard</h2>
+								</header>
+								<div class="panel-body">
+									<div class="wizard-progress wizard-progress-lg">
+										<div class="steps-progress">
+											<div class="progress-indicator" style="width: 0%;"></div>
 										</div>
+										<ul class="wizard-steps">
+											<li class="active">
+												<a href="#w4-account" data-toggle="tab"><span>1</span>Account Info</a>
+											</li>
+											<li>
+												<a href="#w4-profile" data-toggle="tab"><span>2</span>Profile Info</a>
+											</li>
+											<li>
+												<a href="#w4-billing" data-toggle="tab"><span>3</span>Billing Info</a>
+											</li>
+											<li>
+												<a href="#w4-confirm" data-toggle="tab"><span>4</span>Confirmation</a>
+											</li>
+										</ul>
 									</div>
-								</div>
-								<div class="panel panel-default">
-									<div class="panel-heading">
-										<h4 class="panel-title">
-											<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
-												Shipping Address
-											</a>
-										</h4>
-									</div>
-									<div id="collapseTwo" class="accordion-body collapse">
-										<div class="panel-body">
-											<form action="/" id="frmShippingAddress" method="post">
-												<div class="row">
-													<div class="col-md-12">
-														<span class="remember-box checkbox">
-															<label>
-																<input type="checkbox" checked="checked">Ship to billing address?
-															</label>
-														</span>
+					
+									<form class="form-horizontal" novalidate="novalidate">
+										<div class="tab-content">
+											<div id="w4-account" class="tab-pane active">
+												<div class="form-group">
+													<label class="col-sm-3 control-label" for="w4-username">Username</label>
+													<div class="col-sm-9">
+														<input type="text" class="form-control" name="username" id="w4-username" required="" aria-required="true" autocomplete="off" style="background-image: url(&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAASCAYAAABSO15qAAAAAXNSR0IArs4c6QAAAPhJREFUOBHlU70KgzAQPlMhEvoQTg6OPoOjT+JWOnRqkUKHgqWP4OQbOPokTk6OTkVULNSLVc62oJmbIdzd95NcuGjX2/3YVI/Ts+t0WLE2ut5xsQ0O+90F6UxFjAI8qNcEGONia08e6MNONYwCS7EQAizLmtGUDEzTBNd1fxsYhjEBnHPQNG3KKTYV34F8ec/zwHEciOMYyrIE3/ehKAqIoggo9inGXKmFXwbyBkmSQJqmUNe15IRhCG3byphitm1/eUzDM4qR0TTNjEixGdAnSi3keS5vSk2UDKqqgizLqB4YzvassiKhGtZ/jDMtLOnHz7TE+yf8BaDZXA509yeBAAAAAElFTkSuQmCC&quot;); background-repeat: no-repeat; background-attachment: scroll; background-size: 16px 18px; background-position: 98% 50%; cursor: auto;">
 													</div>
 												</div>
-												<div class="row">
-													<div class="form-group">
-														<div class="col-md-12">
-															<label>Country</label>
-															<select class="form-control">
-																<option value="">Select a country</option>
-															</select>
+												<div class="form-group">
+													<label class="col-sm-3 control-label" for="w4-password">Password</label>
+													<div class="col-sm-9">
+														<input type="password" class="form-control" name="password" id="w4-password" required="" minlength="6" aria-required="true" autocomplete="off" style="background-image: url(&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAASCAYAAABSO15qAAAAAXNSR0IArs4c6QAAAPhJREFUOBHlU70KgzAQPlMhEvoQTg6OPoOjT+JWOnRqkUKHgqWP4OQbOPokTk6OTkVULNSLVc62oJmbIdzd95NcuGjX2/3YVI/Ts+t0WLE2ut5xsQ0O+90F6UxFjAI8qNcEGONia08e6MNONYwCS7EQAizLmtGUDEzTBNd1fxsYhjEBnHPQNG3KKTYV34F8ec/zwHEciOMYyrIE3/ehKAqIoggo9inGXKmFXwbyBkmSQJqmUNe15IRhCG3byphitm1/eUzDM4qR0TTNjEixGdAnSi3keS5vSk2UDKqqgizLqB4YzvassiKhGtZ/jDMtLOnHz7TE+yf8BaDZXA509yeBAAAAAElFTkSuQmCC&quot;); background-repeat: no-repeat; background-attachment: scroll; background-size: 16px 18px; background-position: 98% 50%;">
+													</div>
+												</div>
+											</div>
+											<div id="w4-profile" class="tab-pane">
+												<div class="form-group">
+													<label class="col-sm-3 control-label" for="w4-first-name">First Name</label>
+													<div class="col-sm-9">
+														<input type="text" class="form-control" name="first-name" id="w4-first-name" required="" aria-required="true" autocomplete="off" style="background-image: url(&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAASCAYAAABSO15qAAAAAXNSR0IArs4c6QAAAPhJREFUOBHlU70KgzAQPlMhEvoQTg6OPoOjT+JWOnRqkUKHgqWP4OQbOPokTk6OTkVULNSLVc62oJmbIdzd95NcuGjX2/3YVI/Ts+t0WLE2ut5xsQ0O+90F6UxFjAI8qNcEGONia08e6MNONYwCS7EQAizLmtGUDEzTBNd1fxsYhjEBnHPQNG3KKTYV34F8ec/zwHEciOMYyrIE3/ehKAqIoggo9inGXKmFXwbyBkmSQJqmUNe15IRhCG3byphitm1/eUzDM4qR0TTNjEixGdAnSi3keS5vSk2UDKqqgizLqB4YzvassiKhGtZ/jDMtLOnHz7TE+yf8BaDZXA509yeBAAAAAElFTkSuQmCC&quot;); background-repeat: no-repeat; background-attachment: scroll; background-size: 16px 18px; background-position: 98% 50%;">
+													</div>
+												</div>
+												<div class="form-group">
+													<label class="col-sm-3 control-label" for="w4-last-name">Last Name</label>
+													<div class="col-sm-9">
+														<input type="text" class="form-control" name="last-name" id="w4-last-name" required="" aria-required="true" autocomplete="off" style="background-image: url(&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAASCAYAAABSO15qAAAAAXNSR0IArs4c6QAAAPhJREFUOBHlU70KgzAQPlMhEvoQTg6OPoOjT+JWOnRqkUKHgqWP4OQbOPokTk6OTkVULNSLVc62oJmbIdzd95NcuGjX2/3YVI/Ts+t0WLE2ut5xsQ0O+90F6UxFjAI8qNcEGONia08e6MNONYwCS7EQAizLmtGUDEzTBNd1fxsYhjEBnHPQNG3KKTYV34F8ec/zwHEciOMYyrIE3/ehKAqIoggo9inGXKmFXwbyBkmSQJqmUNe15IRhCG3byphitm1/eUzDM4qR0TTNjEixGdAnSi3keS5vSk2UDKqqgizLqB4YzvassiKhGtZ/jDMtLOnHz7TE+yf8BaDZXA509yeBAAAAAElFTkSuQmCC&quot;); background-repeat: no-repeat; background-attachment: scroll; background-size: 16px 18px; background-position: 98% 50%;">
+													</div>
+												</div>
+											</div>
+											<div id="w4-billing" class="tab-pane">
+												<div class="form-group">
+													<label class="col-sm-3 control-label" for="w4-cc">Card Number</label>
+													<div class="col-sm-9">
+														<input type="text" class="form-control" name="cc-number" id="w4-cc" required="" aria-required="true" autocomplete="off" style="background-image: url(&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAASCAYAAABSO15qAAAAAXNSR0IArs4c6QAAAPhJREFUOBHlU70KgzAQPlMhEvoQTg6OPoOjT+JWOnRqkUKHgqWP4OQbOPokTk6OTkVULNSLVc62oJmbIdzd95NcuGjX2/3YVI/Ts+t0WLE2ut5xsQ0O+90F6UxFjAI8qNcEGONia08e6MNONYwCS7EQAizLmtGUDEzTBNd1fxsYhjEBnHPQNG3KKTYV34F8ec/zwHEciOMYyrIE3/ehKAqIoggo9inGXKmFXwbyBkmSQJqmUNe15IRhCG3byphitm1/eUzDM4qR0TTNjEixGdAnSi3keS5vSk2UDKqqgizLqB4YzvassiKhGtZ/jDMtLOnHz7TE+yf8BaDZXA509yeBAAAAAElFTkSuQmCC&quot;); background-repeat: no-repeat; background-attachment: scroll; background-size: 16px 18px; background-position: 98% 50%;">
+													</div>
+												</div>
+												<div class="form-group">
+													<label class="col-sm-3 control-label" for="inputSuccess">Expiration</label>
+													<div class="col-sm-5">
+														<select class="form-control" name="exp-month" required="" aria-required="true">
+															<option>January</option>
+															<option>February</option>
+															<option>March</option>
+															<option>April</option>
+															<option>May</option>
+															<option>June</option>
+															<option>July</option>
+															<option>August</option>
+															<option>September</option>
+															<option>October</option>
+															<option>November</option>
+															<option>December</option>
+														</select>
+													</div>
+													<div class="col-sm-4">
+														<select class="form-control" name="exp-year" required="" aria-required="true">
+															<option>2014</option>
+															<option>2015</option>
+															<option>2016</option>
+															<option>2017</option>
+															<option>2018</option>
+															<option>2019</option>
+															<option>2020</option>
+															<option>2021</option>
+															<option>2022</option>
+														</select>
+													</div>
+												</div>
+											</div>
+											<div id="w4-confirm" class="tab-pane">
+												<div class="form-group">
+													<label class="col-sm-3 control-label" for="w4-email">Email</label>
+													<div class="col-sm-9">
+														<input type="text" class="form-control" name="email" id="w4-email" required="" aria-required="true" autocomplete="off" style="background-image: url(&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAASCAYAAABSO15qAAAAAXNSR0IArs4c6QAAAPhJREFUOBHlU70KgzAQPlMhEvoQTg6OPoOjT+JWOnRqkUKHgqWP4OQbOPokTk6OTkVULNSLVc62oJmbIdzd95NcuGjX2/3YVI/Ts+t0WLE2ut5xsQ0O+90F6UxFjAI8qNcEGONia08e6MNONYwCS7EQAizLmtGUDEzTBNd1fxsYhjEBnHPQNG3KKTYV34F8ec/zwHEciOMYyrIE3/ehKAqIoggo9inGXKmFXwbyBkmSQJqmUNe15IRhCG3byphitm1/eUzDM4qR0TTNjEixGdAnSi3keS5vSk2UDKqqgizLqB4YzvassiKhGtZ/jDMtLOnHz7TE+yf8BaDZXA509yeBAAAAAElFTkSuQmCC&quot;); background-repeat: no-repeat; background-attachment: scroll; background-size: 16px 18px; background-position: 98% 50%;">
+													</div>
+												</div>
+												<div class="form-group">
+													<div class="col-sm-3"></div>
+													<div class="col-sm-9">
+														<div class="checkbox-custom">
+															<input type="checkbox" name="terms" id="w4-terms" required="" aria-required="true">
+															<label for="w4-terms">I agree to the terms of service</label>
 														</div>
 													</div>
 												</div>
-												<div class="row">
-													<div class="form-group">
-														<div class="col-md-6">
-															<label>First Name</label>
-															<input type="text" value="" class="form-control">
-														</div>
-														<div class="col-md-6">
-															<label>Last Name</label>
-															<input type="text" value="" class="form-control">
-														</div>
-													</div>
-												</div>
-												<div class="row">
-													<div class="form-group">
-														<div class="col-md-12">
-															<label>Company Name</label>
-															<input type="text" value="" class="form-control">
-														</div>
-													</div>
-												</div>
-												<div class="row">
-													<div class="form-group">
-														<div class="col-md-12">
-															<label>Address </label>
-															<input type="text" value="" class="form-control">
-														</div>
-													</div>
-												</div>
-												<div class="row">
-													<div class="form-group">
-														<div class="col-md-12">
-															<label>City </label>
-															<input type="text" value="" class="form-control">
-														</div>
-													</div>
-												</div>
-												<div class="row">
-													<div class="col-md-12">
-														<input type="submit" value="Continue" class="btn btn-primary pull-right mb-xl" data-loading-text="Loading...">
-													</div>
-												</div>
-											</form>
+											</div>
 										</div>
-									</div>
+									</form>
 								</div>
-								<div class="panel panel-default">
-									<div class="panel-heading">
-										<h4 class="panel-title">
-											<a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseThree">
-												Review & Payment
-											</a>
-										</h4>
-									</div>
-									<div id="collapseThree" class="accordion-body collapse">
-										<div class="panel-body">
-											<table class="shop_table cart">
-												<thead>
-													<tr>
-														<th class="product-thumbnail">
-															&nbsp;
-														</th>
-														<th class="product-name">
-															Product
-														</th>
-														<th class="product-price">
-															Price
-														</th>
-														<th class="product-quantity">
-															Quantity
-														</th>
-														<th class="product-subtotal">
-															Total
-														</th>
-													</tr>
-												</thead>
-												<tbody>
-													<tr class="cart_table_item">
-														<td class="product-thumbnail">
-															<a href="shop-product-sidebar.html">
-																<img width="100" height="100" alt="" class="img-responsive" src="img/products/product-1.jpg">
-															</a>
-														</td>
-														<td class="product-name">
-															<a href="shop-product-sidebar.html">Photo Camera</a>
-														</td>
-														<td class="product-price">
-															<span class="amount">$299</span>
-														</td>
-														<td class="product-quantity">
-															1
-														</td>
-														<td class="product-subtotal">
-															<span class="amount">$299</span>
-														</td>
-													</tr>
-													<tr class="cart_table_item">
-														<td class="product-thumbnail">
-															<a href="shop-product-sidebar.html">
-																<img width="100" height="100" alt="" class="img-responsive" src="img/products/product-2.jpg">
-															</a>
-														</td>
-														<td class="product-name">
-															<a href="shop-product-sidebar.html">Golf Bag</a>
-														</td>
-														<td class="product-price">
-															<span class="amount">$72</span>
-														</td>
-														<td class="product-quantity">
-															1
-														</td>
-														<td class="product-subtotal">
-															<span class="amount">$72</span>
-														</td>
-													</tr>
-													<tr class="cart_table_item">
-														<td class="product-thumbnail">
-															<a href="shop-product-sidebar.html">
-																<img width="100" height="100" alt="" class="img-responsive" src="img/products/product-3.jpg">
-															</a>
-														</td>
-														<td class="product-name">
-															<a href="shop-product-sidebar.html">Workout</a>
-														</td>
-														<td class="product-price">
-															<span class="amount">$60</span>
-														</td>
-														<td class="product-quantity">
-															1
-														</td>
-														<td class="product-subtotal">
-															<span class="amount">$60</span>
-														</td>
-													</tr>
-												</tbody>
-											</table>
-
-											<hr class="tall">
-
-											<h4 class="heading-primary">Cart Totals</h4>
-											<table class="cart-totals">
-												<tbody>
-													<tr class="cart-subtotal">
-														<th>
-															<strong>Cart Subtotal</strong>
-														</th>
-														<td>
-															<strong><span class="amount">$431</span></strong>
-														</td>
-													</tr>
-													<tr class="shipping">
-														<th>
-															Shipping
-														</th>
-														<td>
-															Free Shipping<input type="hidden" value="free_shipping" id="shipping_method" name="shipping_method">
-														</td>
-													</tr>
-													<tr class="total">
-														<th>
-															<strong>Order Total</strong>
-														</th>
-														<td>
-															<strong><span class="amount">$431</span></strong>
-														</td>
-													</tr>
-												</tbody>
-											</table>
-
-											<hr class="tall">
-
-											<h4 class="heading-primary">Payment</h4>
-
-											<form action="/" id="frmPayment" method="post">
-												<div class="row">
-													<div class="col-md-12">
-														<span class="remember-box checkbox">
-															<label>
-																<input type="checkbox" checked="checked">Direct Bank Transfer
-															</label>
-														</span>
-													</div>
-												</div>
-												<div class="row">
-													<div class="col-md-12">
-														<span class="remember-box checkbox">
-															<label>
-																<input type="checkbox">Cheque Payment
-															</label>
-														</span>
-													</div>
-												</div>
-												<div class="row">
-													<div class="col-md-12">
-														<span class="remember-box checkbox">
-															<label>
-																<input type="checkbox">Paypal
-															</label>
-														</span>
-													</div>
-												</div>
-											</form>
-										</div>
-									</div>
+								<div class="panel-footer">
+									<ul class="pager">
+										<li class="previous disabled">
+											<a><i class="fa fa-angle-left"></i> Previous</a>
+										</li>
+										<li class="finish hidden pull-right">
+											<a>Finish</a>
+										</li>
+										<li class="next">
+											<a>Next <i class="fa fa-angle-right"></i></a>
+										</li>
+									</ul>
 								</div>
-							</div>
-
-							<div class="actions-continue">
-								<input type="submit" value="Place Order" name="proceed" class="btn btn-lg btn-primary mt-xl">
-							</div>
-
-						</div>
-						
-					</div>
+							</section>
 
 			</div>
 
